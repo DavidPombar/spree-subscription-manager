@@ -1,11 +1,11 @@
-<h2>Mailing Lists</h2>
+<h2>Lista de distribución</h2>
 
-<p>When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists</p>
+<p>Cuando el usuario va a crear una cuenta, se les preguntará si desean suscribirse a estas listas de correo</p>
 
-<%= link_to t("Add Mailing List"), new_admin_mailing_list_path -%>
+<%= link_to t("Añadirse a la lista de correo"), new_admin_mailing_list_path -%>
 <br/><br/>
 
-<h1><%= t("Listing Mailing Lists") %></h1>
+<h1><%= t("Listado de listas de distribución") %></h1>
 
 <table class="admin-report">
   <tr>
@@ -19,12 +19,12 @@
         <%= mailing_list.name %>
     </td>
     <td>
-      <%= link_to t('Export Emails in CSV Format'), [:admin, mailing_list] %> |
-      <%= link_to t('Edit'), [:edit, :admin, mailing_list] %> | 
-      <%= link_to t('Destroy'), [:admin, mailing_list], :method => :delete, :confirm => t('Are you sure you want to delete this mailing_list?') %>
+      <%= link_to t('Exportar emails a formato CSV'), [:admin, mailing_list] %> |
+      <%= link_to t('Editar'), [:edit, :admin, mailing_list] %> | 
+      <%= link_to t('Elimina'), [:admin, mailing_list], :method => :delete, :confirm => t('¿Estás seguro de que deseas eliminar esta lista de distribución?') %>
     </td>
   </tr>
 <% end %>
 </table>
 <br />
-<%= link_to "Back to Configurations", :controller => "admin/configurations" %>
+<%= link_to "Volver a la configuración", :controller => "admin/configurations" %>
